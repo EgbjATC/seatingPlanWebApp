@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0; url=./">
+</head>
+<body>
+  <script type="text/javascript">
+    // Redirect to the correct route
+    var path = window.location.pathname;
+    // this following line will redirect to the root of the app 
+    // with the added parameter (path) given 
+    // via the redirectTo link received via email
+    // window.location.origin will return the root of the app (https://egbjatc.github.io/egbj_ATCO_HOW_TOW_WebApp)
+    // path will return the path of the app (?email=$email)
+    // so the final url will be https://egbjatc.github.io/egbj_ATCO_HOW_TOW_WebApp?email=$email
+    // which will redirect to the root of the app with the email parameter
+    // this same url is also put in the supabase's project authentication settings "Redirect URLs"
+    window.location.href = window.location.origin  + path;
+  </script>
+</body>
+</html>
